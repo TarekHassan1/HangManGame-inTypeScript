@@ -1,0 +1,261 @@
+main {
+	width: 1000px;
+	margin-inline: auto;
+
+}
+
+body {
+	font-family: Tahoma, Arial;
+}
+
+.hangMan {
+	display: flex;
+	height: 350px;
+    padding-bottom: 1.5rem;
+	gap: 3rem;
+                    border-bottom: 3px solid #EEE;
+}
+.header{
+        display: flex;
+            justify-content: space-between;
+            align-items: center;
+                border-bottom: 3px solid #EEE;
+                margin-bottom: 2rem;
+                padding-bottom: 0rem;
+}
+.header h1{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+    
+}
+.header p .type{
+    color: red;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.mainDiv {
+	flex: 1;
+	background-color: #eee;
+	padding-bottom: 2rem;
+	position: relative;
+}
+
+.draw {
+    top: 50%;
+    left: 47.5%;
+transform: translate(-60%, -80%);
+    position: absolute;
+        width: 100%;
+        height: 100%;
+}
+
+.mainDiv>div>div:not(.face, .rotated-line) {
+	background-color: black;
+	border-radius: 0.4rem;
+	z-index: 1;
+}
+
+.mainDiv>div>div {
+	transition: 0.5s all;
+	opacity: 0;
+}
+
+.bottom {
+	width: 70px;
+	height: 8.5px;
+	position: absolute;
+	top: 24.5rem;
+	;
+	left: 12.5rem;
+}
+
+.horizontal-line {
+	width: 10px;
+	height: 15rem;
+	position: absolute;
+	left: 14.35rem;
+	top: 10rem;
+}
+
+.vertical-line {
+	width: 130px;
+	height: 8.5px;
+	position: absolute;
+	top: 10rem;
+	left: 14.4rem;
+}
+
+.rotated-line {
+	width: 65px;
+	height: 8.5px;
+	position: absolute;
+	top: 11.5rem;
+	z-index: 0;
+	left: 14rem;
+	transform: rotate(310deg);
+	background-color: black;
+}
+
+.vertical-line-2 {
+	width: 10px;
+	height: 50.5px;
+	position: absolute;
+	top: 10rem;
+	left: 22rem;
+}
+
+.face {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: transparent;
+	border: 10px solid black;
+	border-radius: 50%;
+	top: 12.7rem;
+	left: 20.1rem;
+}
+
+.body {
+	width: 10px;
+	height: 5rem;
+	left: 22rem;
+	top: 16.75rem;
+	position: absolute;
+}
+
+.hands {
+	width: 7px;
+	height: 50px;
+	rotate: 55deg;
+	position: absolute;
+	left: 20.7rem;
+	top: 17rem;
+}
+
+.hands::before {
+	content: "";
+	position: absolute;
+	width: 7px;
+	height: 50px;
+	rotate: 70deg;
+	position: absolute;
+	background: black;
+	left: 1.5rem;
+	top: -2.2rem;
+	border-radius: 0.4rem;
+}
+
+.legs {
+	width: 7px;
+	height: 50px;
+	rotate: 35deg;
+	position: absolute;
+	left: 21.25rem;
+	top: 21rem;
+
+}
+
+.legs::before {
+	content: "";
+	width: 7px;
+	height: 50px;
+	rotate: -65deg;
+	position: absolute;
+	top: -0.9rem;
+	left: 1.35rem;
+	background-color: black;
+	border-radius: 0.4rem;
+}
+
+.letters {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex: 1;
+}
+
+.letters p {
+	background-color: #009688;
+	color: white;
+	width: 55px;
+	height: 55px;
+	font-size: 1.825rem;
+	text-align: center;
+	margin: 0;
+	display: inline-block;
+	font-weight: bold;
+	margin: 0.325rem;
+    transition: 0.325s all;
+	line-height: 1.75;
+	cursor: pointer;
+	text-transform: uppercase;
+
+}
+
+.disabled {
+	background-color: #d3d3d3 !important;
+	pointer-events: none;
+}
+
+.inputs {
+	background-color: #EEE;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-top: 1rem;
+	min-height: 100px;
+
+}
+
+.inputs input {
+	border: 0;
+	width: 60px;
+	height: 50px;
+	margin-inline: 0.4rem;
+	pointer-events: none;
+	border-bottom: 3px solid black;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2rem;
+	text-transform: capitalize;
+}
+.gameover{
+		width: 1000px;
+			height: 35vh;
+			background: rgb(37, 150, 190);
+			color: white;
+			position: absolute;
+			top: 18%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			flex-direction: column;
+			transition:all 0.5s;
+			opacity: 0;
+			z-index: -1;
+			font-size: 2rem;
+			border-radius: 1rem;
+
+}
+.gameover button{
+	cursor: pointer;
+		border: 2px solid #76b5c5;
+		background: #76b5c5;
+		color: white;
+		padding: 0.75rem 2rem;
+		border-radius: 1.5rem;
+		margin-top: 2rem;
+		font-size: 1.3rem;
+}
+.gameover button:active{
+	scale: 0.89;
+}
+.show{
+	opacity: 1;
+	z-index: 1;
+}
