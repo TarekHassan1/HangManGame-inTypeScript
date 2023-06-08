@@ -91,4 +91,3 @@ letters.split("").forEach(element => {
 });
 
 
-console.log(42424);
