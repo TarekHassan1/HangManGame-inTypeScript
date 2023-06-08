@@ -76,4 +76,5 @@ letters.split("").forEach(element => {
         }
     });
 });
+console.log(42424);
 //# sourceMappingURL=index.js.map
