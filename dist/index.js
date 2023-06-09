@@ -23,7 +23,6 @@ const wordsKey = keys[RandomProperty];
 const word = words[wordsKey];
 const randomWord = word[Math.floor(Math.random() * word.length)];
 const arrRandomWord = Array.from(randomWord);
-console.log(arrRandomWord);
 if (WordType) {
     WordType.textContent = wordsKey;
 }
